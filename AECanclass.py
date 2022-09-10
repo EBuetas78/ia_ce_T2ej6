@@ -65,7 +65,7 @@ class clsAECan:
             for i in range(len(self.i)):
                 sum_f+=self.i[i].fitness
             for i in range(len(self.i)):
-                P.append(self.i[i].fitness/sum_f)
+                P.append(1-(self.i[i].fitness/sum_f))#el 1- para minimizar
             L=[]
             L.append(0)
             for i in range(1,len(self.i)+1):
@@ -75,16 +75,16 @@ class clsAECan:
 
     def __torneo(self):
         pos_inds=[]  
-        max_fitness=0  
+        min_fitness=0  
         pos_ganador=0    
         while len(pos_inds)<self.config.tamtorneo:
             pos_ind=randint(0,self.config.poplen-1)
             if (pos_ind not in pos_inds):
                 pos_inds.append(pos_ind)
         for i in range(len(pos_inds)):
-            if (max_fitness<self.i[pos_inds[i]].fitness):
+            if (min_fitness>self.i[pos_inds[i]].fitness):
                 pos_ganador=pos_inds[i]
-                max_fitness=self.i[pos_inds[i]].fitness                    
+                min_fitness=self.i[pos_inds[i]].fitness                    
         return self.i[pos_ganador].copy()
     
     def __ruleta(self,L):
