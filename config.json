@@ -5,7 +5,7 @@
     "sigma":3.0,  
     "tamtorneo":4,
     "elitismo":4,        
-    "tipo_seleccion_padres":0,
+    "tipo_seleccion_padres":1,
     "_comment_seleccion_padres":"0-torneo,1-proporcional",
     "n_gen_reinicio":100000,
     "n_gen_terminacion":500

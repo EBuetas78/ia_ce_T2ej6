@@ -63,9 +63,9 @@ class clsAECan:
             P=[]
             sum_f=0
             for i in range(len(self.i)):
-                sum_f+=self.i[i].fitness
+                sum_f+=(1/self.i[i].fitness)
             for i in range(len(self.i)):
-                P.append(1-(self.i[i].fitness/sum_f))#el 1- para minimizar
+                P.append((1/self.i[i].fitness/sum_f))#el 1- para minimizar
             L=[]
             L.append(0)
             for i in range(1,len(self.i)+1):
