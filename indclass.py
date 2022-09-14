@@ -13,9 +13,7 @@ class clsind:
         return respuesta
 
     def calc_fitness(self):
-        #calculamos el valor de la funcion de Rastrigin
-        
+        #calculamos el valor de la funcion de Rastrigin        
         valor=20+(math.pow(self.x[0],2)-10*math.cos((2*math.pi*self.x[0])))+(math.pow(self.x[1],2)-10*math.cos((2*math.pi*self.x[1])))
-        
         self.fitness=valor
    
