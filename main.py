@@ -9,11 +9,11 @@ from configclass import clsconfig
 import argparse
 
 '''
-optimizamos el minimo de la funcion de Mishra Bird
-f(x1,x2))sin(x2)exp(1-cos(x1))^2+cos(x1)exp(1-sin(x2))^2+(x1-x2)^2
-para el rango -10<=x1<=0 y -6.5<=x2<=0
-f(−3.1302468,−1.5821422)=−106.7645367
-https://www.cienciadedatos.net/documentos/48_optimizacion_con_algoritmo_genetico
+en esta version optimizaremos la funcion de Rastrigin del ejercicio 7 del tema 3 para n2
+f(x1,x2)=20+(x1^2-10*cos(2pix1))+(x2^2-10*cos(2pix2))
+para el rango -5.12<=x1<=5.12 y -5.12<=x2<=5.12
+f(0,0)=0
+
 '''
 
 

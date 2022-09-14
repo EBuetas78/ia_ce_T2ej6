@@ -13,9 +13,9 @@ class clsind:
         return respuesta
 
     def calc_fitness(self):
-        #calculamos el valor de la funcion de Mishra Bird
-        #f(x1,x2))sin(x2)exp(1-cos(x1))^2+cos(x1)exp(1-sin(x2))^2+(x1-x2)^2
-        valor=math.sin(self.x[1])*math.pow(math.exp(1-math.cos(self.x[0])),2)+math.cos(self.x[0])*math.pow(math.exp(1-math.sin(self.x[1])),2)+math.pow((self.x[0]-self.x[1]),2)
+        #calculamos el valor de la funcion de Rastrigin
+        
+        valor=20+(math.pow(self.x[0],2)-10*math.cos((2*math.pi*self.x[0])))+(math.pow(self.x[1],2)-10*math.cos((2*math.pi*self.x[1])))
         
         self.fitness=valor
    

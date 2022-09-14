@@ -23,9 +23,7 @@ class clsAECan:
         self.soluc=[]
         self.n_generacion=0
     
-    def initpob(self):
-        #Lo voy a tratar como un problema de permutacion, donde hay que poner 9 9s, 9 8s,....9 1s. Teniendo en cuenta los 
-        #valores que estan fijos en los valores dados
+    def initpob(self):              
         self.i=[]
         self.h=[]
         self.m=[]
@@ -63,9 +61,9 @@ class clsAECan:
             P=[]
             sum_f=0
             for i in range(len(self.i)):
-                sum_f+=(1/self.i[i].fitness)
+                sum_f+=(1/(1+self.i[i].fitness))
             for i in range(len(self.i)):
-                P.append((1/self.i[i].fitness/sum_f))#el 1- para minimizar
+                P.append((1/(1+self.i[i].fitness)/sum_f))#el 1- para minimizar
             L=[]
             L.append(0)
             for i in range(1,len(self.i)+1):
